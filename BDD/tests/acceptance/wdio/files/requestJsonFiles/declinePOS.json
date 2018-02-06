@@ -1,0 +1,52 @@
+{
+  "transactionDetails": {
+    "bankAccountNumber": "string",
+    "cardholderBillAmount": 0,
+    "merchantInfo": {
+      "addressLines": [
+        "string"
+      ],
+      "city": "string",
+      "countryCode": "string",
+      "currencyCode": "string",
+      "merchantCategoryCode": "string",
+      "name": "string",
+      "postalCode": "string",
+      "region": "string"
+    },
+    "nameOnCard": "string",
+    "paymentToken": "string",
+    "primaryAccountNumber": "string",
+    "requestReceivedTimeStamp": "string",
+    "userIdentifier": "string",
+    "userInformation": {
+      "applicationDefinedAttributes": [
+        "string"
+      ],
+      "bankingIdentifier": "string",
+      "name": "string"
+    }
+  },
+  "transactionOutcome": {
+    "alertDetails": [
+      {
+        "alertReason": "DECLINE_ALL",
+        "controlTargetType": "string",
+        "ruleCategory": "PCT_TRANSACTION",
+        "ruleType": "TCT_BRICK_AND_MORTAR",
+        "thresholdAmount": 0,
+        "triggeringAppID": "string",
+        "userIdentifier": "string",
+        "userInformation": {
+          "applicationDefinedAttributes": [
+            "string"
+          ],
+          "bankingIdentifier": "string",
+          "name": "string"
+        }
+      }
+    ],
+    "decisionResponseTimeStamp": "string",
+    "transactionApproved": "APPROVED"
+  }
+}

@@ -1,0 +1,5 @@
+# Locators for Demo Google Script
+
+search: './/*[@id="lst-ib"]'
+Google Search button: './/*[@id="tsf"]/div[2]/div[3]/center/input[1]'
+searchResult: './/*[@id="rhs_title"]//span[text()="Selenium"]'

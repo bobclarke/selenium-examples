@@ -1,0 +1,126 @@
+{
+  "name": "skin-studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "start": "npm run server",
+    "prestart": "npm run createlinks",
+    "serve": "nodemon ./bin/www",
+    "compile": "node ./scripts/child.js",
+    "selenium": "java -jar ./tests/acceptance/wdio/tools/selenium-server-standalone-2.53.1.jar -port 4444 -log ../seleniumLog.txt -Dwebdriver.chrome.driver=node_modules/chromedriver/bin/chromedriver",
+    "createlinks": "node ./scripts/components createLinks=true"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "fs-sync": "^1.0.4",
+    "gulp-util": "*",
+    "morgan": "~1.7.0",
+    "node-watch": "^0.5.5",
+    "request": "^2.83.0",
+    "selenium-standalone": "^6.11.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "async": "1.5.2",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^21.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.23.0",
+    "chai": "3.5.0",
+    "chai-as-promised": "5.3.0",
+    "chromedriver": "2.24.1",
+    "config": "1.19.0",
+    "copy-dir": "^0.3.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "cucumber": "0.10.4",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-config-xo-react": "^0.12.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "extract-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "fs-extra": "0.26.7",
+    "glob": "^7.1.2",
+    "gradient-string": "^0.1.2",
+    "gulp": "3.9.1",
+    "gulp-open": "2.0.0",
+    "gulp-protractor-cucumber-html-report": "0.0.9",
+    "gulp-rename": "1.2.2",
+    "gulp-run": "1.7.1",
+    "gulp-webdriver": "^2.0.2",
+    "ignore-loader": "^0.1.2",
+    "jest": "^21.0.1",
+    "js-yaml": "3.5.5",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.1.1",
+    "pa11y": "^4.0.1",
+    "pa11y-reporter-1.0-json": "^1.0.2",
+    "phantomjs": "2.1.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.5.4",
+    "sass-lint": "^1.11.1",
+    "sasslint-webpack-plugin": "^1.0.4",
+    "slash": "^1.0.0",
+    "wdio-cucumber-framework": "0.0.6",
+    "wdio-spec-reporter": "0.0.3",
+    "webdriverio": "4.6.1",
+    "wdio-selenium-standalone-service": "*",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
+    "xo": "^0.18.2",
+    "yaml-merge": "0.0.2",
+    "selenium-server-standalone-jar": "2.53",
+    "yargs": "5.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./scripts/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
+  },
+  "xo": {
+    "esnext": true,
+    "space": 2,
+    "globals": [
+      "window",
+      "document",
+      "fetch"
+    ],
+    "extends": [
+      "xo",
+      "xo-react/space"
+    ]
+  }
+}
